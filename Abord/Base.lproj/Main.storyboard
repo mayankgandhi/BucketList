@@ -292,29 +292,52 @@
             </objects>
             <point key="canvasLocation" x="2491" y="-246"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="a2A-72-a6e">
             <objects>
-                <viewController id="QTA-Fk-9e5" sceneMemberID="viewController">
+                <viewController id="QTA-Fk-9e5" customClass="MapViewController" customModule="Abord" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SOp-Xh-FbY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MapKit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3D-JV-Czp">
-                                <rect key="frame" x="117" y="114" width="54" height="21"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cie-4t-YX2">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="782"/>
+                                <connections>
+                                    <outlet property="delegate" destination="QTA-Fk-9e5" id="Kj4-ci-ZDQ"/>
+                                </connections>
+                            </mapView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pinpoint" translatesAutoresizingMaskIntoConstraints="NO" id="WFI-Yv-wpD">
+                                <rect key="frame" x="187" y="371" width="40" height="45"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFO-Qu-CkF">
+                                <rect key="frame" x="69" y="800" width="279" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="cie-4t-YX2" firstAttribute="top" secondItem="7hG-RX-fdR" secondAttribute="top" id="2f0-M3-l6V"/>
+                            <constraint firstItem="WFI-Yv-wpD" firstAttribute="top" secondItem="7hG-RX-fdR" secondAttribute="top" constant="371" id="KWH-lm-xtt"/>
+                            <constraint firstItem="7hG-RX-fdR" firstAttribute="bottom" secondItem="cie-4t-YX2" secondAttribute="bottom" constant="26" id="Rm4-zf-Njk"/>
+                            <constraint firstItem="cie-4t-YX2" firstAttribute="centerX" secondItem="SOp-Xh-FbY" secondAttribute="centerX" id="UeK-Gj-PGG"/>
+                            <constraint firstItem="WFI-Yv-wpD" firstAttribute="centerX" secondItem="cie-4t-YX2" secondAttribute="centerX" id="fLV-69-Ats"/>
+                            <constraint firstItem="7hG-RX-fdR" firstAttribute="bottom" secondItem="WFI-Yv-wpD" secondAttribute="bottom" constant="392" id="pxK-Ek-g5K"/>
+                            <constraint firstItem="cie-4t-YX2" firstAttribute="leading" secondItem="7hG-RX-fdR" secondAttribute="leading" id="r2u-zw-VJ1"/>
+                            <constraint firstItem="WFI-Yv-wpD" firstAttribute="leading" secondItem="7hG-RX-fdR" secondAttribute="leading" constant="187" id="zym-H4-8aO"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="7hG-RX-fdR"/>
                     </view>
+                    <connections>
+                        <outlet property="addressLabel" destination="LFO-Qu-CkF" id="SIC-tz-Pav"/>
+                        <outlet property="mapView" destination="cie-4t-YX2" id="neq-D0-Tf0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rWF-Xt-hah" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2491" y="-911"/>
+            <point key="canvasLocation" x="2489.8550724637685" y="-895.3125"/>
         </scene>
         <!--Sign Up-->
         <scene sceneID="RUv-GV-CcI">
@@ -436,4 +459,7 @@
             <point key="canvasLocation" x="990" y="185"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pinpoint" width="840" height="1039"/>
+    </resources>
 </document>
