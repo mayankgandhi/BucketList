@@ -14,6 +14,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var loginCustomButton: CustomButton!
+    var alertController:UIAlertController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +31,9 @@ class LoginViewController: UIViewController {
         PFUser.logInWithUsername(inBackground: username , password: password) { (user, error) in
             if (error != nil) {
                 print(error?.localizedDescription)
-                
+                self.signUpAlert(message: error!.localizedDescription)
+                self.present(self.alertController, animated: true)
+
             }   else    {
                 self.performSegue(withIdentifier: "loginSegue", sender: nil)
             }
@@ -38,19 +41,17 @@ class LoginViewController: UIViewController {
         
     }
     @IBAction func onSignUp(_ sender: Any) {
-//        let user = PFUser()
-//        user.username = emailField.text
-//        user.password = passwordField.text
-//
-//        user.signUpInBackground { (success, error) in
-//            if success  {
-//                self.performSegue(withIdentifier: "loginSegue", sender: nil)
-//            }   else    {
-//                print(error?.localizedDescription)
-//            }
-//        }
         self.performSegue(withIdentifier: "signUpSegue", sender: nil)
     }
+    
+    func signUpAlert( message: String)  {
+           alertController = UIAlertController(title: "Please Try Again", message: message, preferredStyle: .alert)
+           // create an OK action
+           let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
+                           self.dismiss(animated: true, completion: nil)
+           }
+           alertController.addAction(OKAction)
+       }
     
     
     /*

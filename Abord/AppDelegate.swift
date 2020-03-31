@@ -23,7 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 configuration.server = "https://abord.herokuapp.com/parse"
             })
         )
-        
         return true
     }
 

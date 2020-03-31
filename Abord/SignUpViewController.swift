@@ -44,6 +44,7 @@ class SignUpViewController: UIViewController {
              gender = "n/a"
         }
         user["gender"] = gender
+        user["dob"] = birthdatePicker.date
         
         user.signUpInBackground { (success, error) in
             if success  {
@@ -61,8 +62,6 @@ class SignUpViewController: UIViewController {
                         self.dismiss(animated: true, completion: nil)
         }
         alertController.addAction(OKAction)
-        
-        
     }
     
     /*

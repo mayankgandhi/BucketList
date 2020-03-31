@@ -47,8 +47,8 @@ class CustomButton: UIButton {
     
     func shake() {
         let shake           = CABasicAnimation(keyPath: "position")
-        shake.duration      = 0.1
-        shake.repeatCount   = 2
+        shake.duration      = 0.05
+        shake.repeatCount   = 1
         shake.autoreverses  = true
         
         let fromPoint       = CGPoint(x: center.x - 8, y: center.y)
