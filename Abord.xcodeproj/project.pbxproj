@@ -18,6 +18,7 @@
 		A834F9DF24326AC5009F9313 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A834F9DE24326AC5009F9313 /* LoginViewController.swift */; };
 		A834F9E324326B23009F9313 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A834F9E224326B23009F9313 /* FeedViewController.swift */; };
 		A834F9E524327600009F9313 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A834F9E424327600009F9313 /* CameraViewController.swift */; };
+		A834F9E724332556009F9313 /* CustomSignButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A834F9E624332556009F9313 /* CustomSignButton.swift */; };
 		B1F5D7930FD6426E0932FF73 /* Pods_Abord.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 924E09752EA8603D99A46AC7 /* Pods_Abord.framework */; };
 		F4476BC0501F1A96A2E5CEEB /* Pods_Abord_AbordUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64CB8393F0EA1295109E20CA /* Pods_Abord_AbordUITests.framework */; };
 /* End PBXBuildFile section */
@@ -63,6 +64,7 @@
 		A834F9DE24326AC5009F9313 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A834F9E224326B23009F9313 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		A834F9E424327600009F9313 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		A834F9E624332556009F9313 /* CustomSignButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSignButton.swift; sourceTree = "<group>"; };
 		AAC6B70AC73D1A776511D1EA /* Pods_AbordTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AbordTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE833BFF5F3EAD8E02011BF7 /* Pods-Abord-AbordUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abord-AbordUITests.debug.xcconfig"; path = "Target Support Files/Pods-Abord-AbordUITests/Pods-Abord-AbordUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,6 +137,7 @@
 				A834F9E224326B23009F9313 /* FeedViewController.swift */,
 				A834F9B424326A3E009F9313 /* Main.storyboard */,
 				A834F9E424327600009F9313 /* CameraViewController.swift */,
+				A834F9E624332556009F9313 /* CustomSignButton.swift */,
 				A834F9DE24326AC5009F9313 /* LoginViewController.swift */,
 				A834F9B724326A3F009F9313 /* Assets.xcassets */,
 				A834F9B924326A3F009F9313 /* LaunchScreen.storyboard */,
@@ -416,6 +419,7 @@
 				A834F9DF24326AC5009F9313 /* LoginViewController.swift in Sources */,
 				A834F9E324326B23009F9313 /* FeedViewController.swift in Sources */,
 				A834F9AF24326A3E009F9313 /* AppDelegate.swift in Sources */,
+				A834F9E724332556009F9313 /* CustomSignButton.swift in Sources */,
 				A834F9B124326A3E009F9313 /* SceneDelegate.swift in Sources */,
 				A834F9E524327600009F9313 /* CameraViewController.swift in Sources */,
 			);

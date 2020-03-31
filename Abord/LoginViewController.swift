@@ -13,6 +13,7 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var loginCustomButton: CustomButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,12 +22,14 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func onSignIn(_ sender: Any) {
+        loginCustomButton.shake()
         let username = emailField.text!
         let password  = passwordField.text!
         
         PFUser.logInWithUsername(inBackground: username , password: password) { (user, error) in
             if (error != nil) {
                 print(error?.localizedDescription)
+                
             }   else    {
                 self.performSegue(withIdentifier: "loginSegue", sender: nil)
             }
