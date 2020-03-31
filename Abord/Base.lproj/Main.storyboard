@@ -98,15 +98,66 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You have Signed up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yO5-qH-VwA">
-                                <rect key="frame" x="132" y="127" width="151" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZBj-Tv-CAV">
+                                <rect key="frame" x="0.0" y="56" width="414" height="682"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="kTe-Yh-tyn"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostTableViewCell" rowHeight="342" id="vCr-GN-ONy" customClass="PostTableViewCell" customModule="Abord" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="342"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vCr-GN-ONy" id="5aG-qE-6a6">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="342"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="12b-0L-vCx">
+                                                    <rect key="frame" x="20" y="52.5" width="374" height="237"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="237" id="FkQ-KS-cfq"/>
+                                                        <constraint firstAttribute="width" constant="374" id="z3V-jY-7b0"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mayankgandhi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K0H-J6-CQU">
+                                                    <rect key="frame" x="28" y="19" width="111" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This was an amazing experience!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHX-7Z-ELA">
+                                                    <rect key="frame" x="28" y="297.5" width="252" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="WHX-7Z-ELA" firstAttribute="leading" secondItem="5aG-qE-6a6" secondAttribute="leadingMargin" constant="8" id="Bga-Rs-HCw"/>
+                                                <constraint firstItem="12b-0L-vCx" firstAttribute="top" secondItem="K0H-J6-CQU" secondAttribute="bottom" constant="13" id="DNM-9H-bPd"/>
+                                                <constraint firstItem="K0H-J6-CQU" firstAttribute="top" secondItem="5aG-qE-6a6" secondAttribute="topMargin" constant="8" id="MYG-sN-i2S"/>
+                                                <constraint firstItem="12b-0L-vCx" firstAttribute="centerY" secondItem="5aG-qE-6a6" secondAttribute="centerY" id="Nq6-Pm-0M2"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="WHX-7Z-ELA" secondAttribute="bottom" constant="12.5" id="aOY-91-tuS"/>
+                                                <constraint firstItem="12b-0L-vCx" firstAttribute="leading" secondItem="5aG-qE-6a6" secondAttribute="leadingMargin" id="aa0-bP-KHX"/>
+                                                <constraint firstItem="WHX-7Z-ELA" firstAttribute="top" secondItem="12b-0L-vCx" secondAttribute="bottom" constant="8" id="axp-uG-uMi"/>
+                                                <constraint firstItem="K0H-J6-CQU" firstAttribute="leading" secondItem="5aG-qE-6a6" secondAttribute="leadingMargin" constant="8" id="jKo-Zg-jQV"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="CaptionLabel" destination="WHX-7Z-ELA" id="BRh-P2-OtQ"/>
+                                            <outlet property="postPhotoView" destination="12b-0L-vCx" id="5hx-ZF-p6p"/>
+                                            <outlet property="usernameLabel" destination="K0H-J6-CQU" id="5xw-nU-p2r"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ZBj-Tv-CAV" firstAttribute="top" secondItem="m9j-0t-utN" secondAttribute="top" id="Dby-hb-S2v"/>
+                            <constraint firstItem="ZBj-Tv-CAV" firstAttribute="leading" secondItem="m9j-0t-utN" secondAttribute="leading" id="FuI-rV-fcT"/>
+                            <constraint firstItem="m9j-0t-utN" firstAttribute="bottom" secondItem="ZBj-Tv-CAV" secondAttribute="bottom" id="hKx-g3-tB6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="m9j-0t-utN"/>
                     </view>
                     <navigationItem key="navigationItem" id="IOK-Im-58h">
@@ -116,6 +167,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="postTableView" destination="ZBj-Tv-CAV" id="Opm-iD-7JL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KUZ-Jl-tBi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
