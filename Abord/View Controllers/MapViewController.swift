@@ -10,6 +10,18 @@ import UIKit
 import MapKit
 import CoreLocation
 
+class mapPin: NSObject, MKAnnotation    {
+    var coordinate: CLLocationCoordinate2D
+    var title: String?
+    var subtitle: String?
+    
+    init(title:String?, subTitle:String?, location:CLLocationCoordinate2D) {
+        self.title = title
+        self.coordinate = location
+        self.subtitle = subTitle
+    }
+}
+
 class MapViewController: UIViewController {
     
     let locationManager = CLLocationManager()
@@ -36,8 +48,6 @@ class MapViewController: UIViewController {
             setupLocationServices()
             checkLocationAuthorisation()
         }   else    {
-            
-            
         }
     }
     
@@ -116,15 +126,15 @@ extension MapViewController:MKMapViewDelegate   {
             }
             guard let placemark = placemarks?.first else     {
                 return
-                
             }
             let region = placemark.locality ?? " "
             let country = placemark.country ?? " "
+            let coordinate = placemark.location?.coordinate
+            let pin = mapPin(title: region, subTitle: country, location:coordinate!)
+            mapView.addAnnotation(pin)
             DispatchQueue.main.async {
-                self.addressLabel.text = "\(region), \(country)"
+                self.addressLabel.text = "\(region),\(country)"
             }
         }
-        
-        
     }
 }

@@ -126,7 +126,7 @@
             <objects>
                 <viewController id="4k2-BR-Bng" customClass="CameraViewController" customModule="Abord" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Uce-cJ-r28">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Caption" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NoZ-Ym-sDY">
@@ -311,11 +311,11 @@
             <objects>
                 <viewController id="MDl-he-Va0" customClass="FeedViewController" customModule="Abord" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ycE-E5-bLA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dZX-5P-V4T">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="710"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="676"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostTableViewCell" rowHeight="369" id="spA-vE-hic" customClass="PostTableViewCell" customModule="Abord" customModuleProvider="target">
@@ -366,10 +366,10 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="2QF-k5-7gc" firstAttribute="trailing" secondItem="dZX-5P-V4T" secondAttribute="trailing" id="RYZ-er-R2F"/>
-                            <constraint firstItem="2QF-k5-7gc" firstAttribute="bottom" secondItem="dZX-5P-V4T" secondAttribute="bottom" id="W8I-rV-sT2"/>
-                            <constraint firstItem="dZX-5P-V4T" firstAttribute="top" secondItem="2QF-k5-7gc" secondAttribute="top" id="onf-od-nSP"/>
-                            <constraint firstItem="dZX-5P-V4T" firstAttribute="leading" secondItem="2QF-k5-7gc" secondAttribute="leading" id="uux-Am-mJI"/>
+                            <constraint firstItem="dZX-5P-V4T" firstAttribute="bottom" secondItem="2QF-k5-7gc" secondAttribute="bottom" id="UQD-s5-kxr"/>
+                            <constraint firstItem="dZX-5P-V4T" firstAttribute="top" secondItem="2QF-k5-7gc" secondAttribute="top" id="bKI-3a-Ihh"/>
+                            <constraint firstItem="dZX-5P-V4T" firstAttribute="leading" secondItem="2QF-k5-7gc" secondAttribute="leading" id="xPB-rv-oo5"/>
+                            <constraint firstItem="dZX-5P-V4T" firstAttribute="trailing" secondItem="2QF-k5-7gc" secondAttribute="trailing" id="xSA-Br-QDb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2QF-k5-7gc"/>
                     </view>
@@ -390,12 +390,11 @@
             <objects>
                 <viewController id="a2v-p1-3Mo" customClass="MapViewController" customModule="Abord" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8QY-J5-fjA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hFu-7X-Cmj">
-                                <rect key="frame" x="0.0" y="58" width="414" height="696"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hFu-7X-Cmj">
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
                                 <connections>
                                     <outlet property="delegate" destination="a2v-p1-3Mo" id="iSZ-Ww-sXk"/>
                                 </connections>
@@ -409,6 +408,12 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hFu-7X-Cmj" firstAttribute="leading" secondItem="Cb3-fg-Had" secondAttribute="leading" id="AxP-E9-NkW"/>
+                            <constraint firstItem="hFu-7X-Cmj" firstAttribute="trailing" secondItem="Cb3-fg-Had" secondAttribute="trailing" id="Fw2-qf-8Kn"/>
+                            <constraint firstItem="Cb3-fg-Had" firstAttribute="bottom" secondItem="hFu-7X-Cmj" secondAttribute="bottom" id="VZb-jg-PjR"/>
+                            <constraint firstItem="hFu-7X-Cmj" firstAttribute="top" secondItem="Cb3-fg-Had" secondAttribute="top" id="Zed-ug-NWr"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Cb3-fg-Had"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="BucketList" image="flag.fill" catalog="system" id="Mwy-IF-Q5D"/>
@@ -421,11 +426,11 @@
             </objects>
             <point key="canvasLocation" x="2825" y="231"/>
         </scene>
-        <!--Welcome Abord!-->
+        <!--Tab Bar Controller-->
         <scene sceneID="zum-9T-9Pm">
             <objects>
                 <tabBarController id="wNR-a6-OwU" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" title="Welcome Abord!" id="3dx-37-9TE"/>
+                    <navigationItem key="navigationItem" id="3dx-37-9TE"/>
                     <tabBar key="tabBar" clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EED-DH-YbH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -443,7 +448,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="six-2q-GYW"/>
+        <segue reference="jDJ-iG-7hc"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="camera.fill" catalog="system" width="128" height="96"/>

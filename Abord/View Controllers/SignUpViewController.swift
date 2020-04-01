@@ -10,13 +10,14 @@ import UIKit
 import Parse
 
 class SignUpViewController: UIViewController {
-
+    
     @IBOutlet weak var fullNameTextField: UITextField!
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var birthdatePicker: UIDatePicker!
     @IBOutlet weak var GenderSegmentedControl: UISegmentedControl!
     var alertController:UIAlertController!
+    var errorController:UIAlertController!
     
     
     override func viewDidLoad() {
@@ -35,13 +36,13 @@ class SignUpViewController: UIViewController {
         var gender:String?
         switch GenderSegmentedControl.selectedSegmentIndex {
         case 0:
-             gender = "male"
+            gender = "male"
         case 1:
-             gender = "female"
+            gender = "female"
         case 2:
-             gender = "other"
+            gender = "other"
         default:
-             gender = "n/a"
+            gender = "n/a"
         }
         user["gender"] = gender
         user["dob"] = birthdatePicker.date
@@ -50,7 +51,8 @@ class SignUpViewController: UIViewController {
             if success  {
                 self.present(self.alertController, animated: true)
             }   else    {
-                print(error?.localizedDescription)
+                self.errorAlert(message: error?.localizedDescription)
+                self.present(self.errorController, animated: true)
             }
         }
     }
@@ -59,19 +61,18 @@ class SignUpViewController: UIViewController {
         alertController = UIAlertController(title: "Successfully Signed Up", message: "Welcome Abord! Please log in with the credentials to access the app!", preferredStyle: .alert)
         // create an OK action
         let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
-                        self.dismiss(animated: true, completion: nil)
+            self.dismiss(animated: true, completion: nil)
         }
         alertController.addAction(OKAction)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func errorAlert(message:String?)  {
+        errorController = UIAlertController(title: "Uh-Oh!", message: message, preferredStyle: .alert)
+        // create an OK action
+        let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
+            self.dismiss(animated: true, completion: nil)
+        }
+        errorController.addAction(OKAction)
     }
-    */
-
+    
 }

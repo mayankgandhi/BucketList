@@ -140,14 +140,10 @@
 			children = (
 				A834F9AE24326A3E009F9313 /* AppDelegate.swift */,
 				A834F9B024326A3E009F9313 /* SceneDelegate.swift */,
-				A834F9E224326B23009F9313 /* FeedViewController.swift */,
 				A834F9B424326A3E009F9313 /* Main.storyboard */,
-				A834F9ED2433A15D009F9313 /* MapViewController.swift */,
-				A834F9E924333077009F9313 /* PostTableViewCell.swift */,
-				A834F9EB24338DE4009F9313 /* SignUpViewController.swift */,
-				A834F9E424327600009F9313 /* CameraViewController.swift */,
+				A8B9994124349D2F0051A382 /* View Controllers */,
 				A834F9E624332556009F9313 /* CustomButton.swift */,
-				A834F9DE24326AC5009F9313 /* LoginViewController.swift */,
+				A834F9E924333077009F9313 /* PostTableViewCell.swift */,
 				A834F9B724326A3F009F9313 /* Assets.xcassets */,
 				A834F9B924326A3F009F9313 /* LaunchScreen.storyboard */,
 				A834F9BC24326A3F009F9313 /* Info.plist */,
@@ -171,6 +167,18 @@
 				A834F9D224326A3F009F9313 /* Info.plist */,
 			);
 			path = AbordUITests;
+			sourceTree = "<group>";
+		};
+		A8B9994124349D2F0051A382 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A834F9ED2433A15D009F9313 /* MapViewController.swift */,
+				A834F9E224326B23009F9313 /* FeedViewController.swift */,
+				A834F9DE24326AC5009F9313 /* LoginViewController.swift */,
+				A834F9EB24338DE4009F9313 /* SignUpViewController.swift */,
+				A834F9E424327600009F9313 /* CameraViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 		E7F9A191A6D5B3D2630F900C /* Pods */ = {
