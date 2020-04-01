@@ -36,7 +36,6 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 print(Error?.localizedDescription)
             }
         }
-        print("Feed View Controller In here")
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
