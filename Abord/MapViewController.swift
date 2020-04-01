@@ -12,15 +12,15 @@ import CoreLocation
 
 class MapViewController: UIViewController {
     
-    @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var addressLabel: UILabel!
     let locationManager = CLLocationManager()
     let regionInMeters:Double = 10000
     var previousLocation:CLLocation?
+    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var addressLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        mapView.delegate = self
         // Do any additional setup after loading the view.
         checkLocationServices()
     }
@@ -121,7 +121,7 @@ extension MapViewController:MKMapViewDelegate   {
             let region = placemark.locality ?? " "
             let country = placemark.country ?? " "
             DispatchQueue.main.async {
-                self.addressLabel.text = "\(region),\(country)"
+                self.addressLabel.text = "\(region), \(country)"
             }
         }
         

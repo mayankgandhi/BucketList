@@ -11,11 +11,8 @@ import Parse
 import AlamofireImage
 
 class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    
     var posts = [PFObject]()
     
-
     @IBOutlet weak var postTableView: UITableView!
     
     override func viewDidLoad() {
@@ -39,7 +36,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 print(Error?.localizedDescription)
             }
         }
-        
+        print("Feed View Controller In here")
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -47,42 +44,17 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        print("generating Cells")
         let tableCell = postTableView.dequeueReusableCell(withIdentifier: "PostTableViewCell") as! PostTableViewCell
         let post = posts[indexPath.row]
-        
         let user = post["author"] as! PFUser
         let caption = post["caption"] as! String
         tableCell.usernameLabel.text = user.username
-        tableCell.CaptionLabel.text = caption
-        
-//        let userImageFile = post["image"] as! PFFileObject
-//        userImageFile.getDataInBackground { (imageData: Data?, error: Error?) in
-//            if let error = error {
-//                print(error.localizedDescription)
-//            } else if let imageData = imageData {
-//                print("image found!")
-//                let image = UIImage(data:imageData)
-//                tableCell.postPhotoView.image = image
-//            }
-//        }
-        
+        tableCell.captionLabel.text = caption
         let imageFile = post["image"] as! PFFileObject
         let urlString = imageFile.url!
         let imageURL = URL(string: urlString)!
-        print(imageURL)
         tableCell.postPhotoView.af_setImage(withURL: imageURL)
-        
         return tableCell
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

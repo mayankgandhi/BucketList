@@ -35,8 +35,9 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
             if (error != nil) {
                 print(error?.localizedDescription)
             } else  {
-                self.dismiss(animated: true, completion: nil)
-                print("saved")
+//                self.dismiss(animated: true, completion: nil)
+//                print("saved")
+                self.performSegue(withIdentifier: "showFeed", sender: nil)
             }
         }
     }
