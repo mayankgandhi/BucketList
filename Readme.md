@@ -5,7 +5,9 @@
 [![Build Status][travis-image]][travis-url]
 [![Platform](https://img.shields.io/cocoapods/p/LFAlertController.svg?style=flat)](http://cocoapods.org/pods/LFAlertController)
 
-![](header.png)
+![](BList1.gif)
+![](BList2.gif)
+![](BList3.gif)
 
 
 ## Requirements
