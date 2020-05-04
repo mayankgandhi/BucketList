@@ -16,9 +16,9 @@
 
 Mayank Gandhi - mayankgandhi50@gmail.com
 
-Distributed under the XYZ license. See ``LICENSE`` for more information.
 
-[https://github.com/yourname/github-link](https://github.com/dbader/)
+
+[https://github.com/mayankgandhi/BucketList/
 
 [swift-image]:https://img.shields.io/badge/swift-3.0-orange.svg
 [swift-url]: https://swift.org/
